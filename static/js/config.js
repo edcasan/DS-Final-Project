@@ -1,4 +1,4 @@
-console.log("Hola")
+/* console.log("Hola")
 
 d3.json("/api_country").then(data=>{
 
@@ -64,13 +64,7 @@ function countryChanged(country){
         Plotly.newPlot('dailycountry', dailycountry_data);
   }); //End d3.json
 } //End countryChanged
-
-
-
-
-
-
-
-init();
+ */
+//init();
 
 

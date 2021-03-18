@@ -1,4 +1,4 @@
-d3.json("/api_country").then(data=>{
+/* d3.json("/api_country").then(data=>{
 
     let country_data = [
         {
@@ -9,4 +9,4 @@ d3.json("/api_country").then(data=>{
       ];
       
     Plotly.newPlot('country', country_data);
-})
+}) */

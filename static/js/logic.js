@@ -225,7 +225,7 @@ button.on("click", function() {
 		"Age Ranges_<25": age1
 	}
 	
-	d3.json("http://127.0.0.1:5000/api/",{
+	d3.json("/api/",{
 		method:"POST",
 		body: JSON.stringify(requestData),
 		headers: {

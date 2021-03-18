@@ -7,11 +7,8 @@ import numpy as np
 import pickle
 import json
 
-
 model = pickle.load(open('intubation_pred.pkl','rb'))
-
 app = Flask(__name__)
-CORS(app)
 
 @app.route('/api/', methods=['POST'])
 def predict():
@@ -29,27 +26,37 @@ def predict():
     # return data
     return jsonify(results=output)
 
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/Readmore")
+def Readmore():
+    return render_template("Readmore.html")
+
+@app.route("/Graphic2")
+def Graphic2():
+    return render_template("Graphic2.html")
+
+@app.route("/Graphic3")
+def Graphic3():
+    return render_template("Graphic3.html")
+
+@app.route("/form")
+def form():
+    return render_template("form.html")
+
+@app.route("/search1")
+def search1():
+    return render_template("search1.html")
+
+@app.route("/search2")
+def search2():
+    return render_template("search2.html")
+
 if __name__ == '__main__':
     app.run(port = 5000, debug=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -62,11 +69,6 @@ if __name__ == '__main__':
     conn=create_engine(connection_string)
     data = pd.read_sql("select * from countries",conn)
     return data
-
-
-@app.route("/")
-def index():
-    return render_template("index.html")
 
 @app.route("/api_country")
 def api_country():
@@ -126,22 +128,12 @@ def countries():
 def Graphic1():
     return render_template("Graphic1.html")
 
-@app.route("/Graphic2")
-def Graphic2():
-    return render_template("Graphic2.html")
 
-@app.route("/Graphic3")
-def Graphic3():
-    return render_template("Graphic3.html")
 
 @app.route("/Graphic4")
 def Graphic4():
     return render_template("Graphic4.html")
-
-
-@app.route("/Readmore")
-def Readmore():
-    return render_template("Readmore.html") """
+ """
 
 #fin de visualizaciones
 
