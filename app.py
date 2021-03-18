@@ -1,11 +1,62 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
+from flask_cors import CORS, cross_origin
 import pandas as pd
 from sqlalchemy import create_engine
 import os
+import numpy as np
+import pickle
+import json
+
+
+model = pickle.load(open('intubation_pred.pkl','rb'))
 
 app = Flask(__name__)
+CORS(app)
 
-def get_data():
+@app.route('/api/', methods=['POST'])
+def predict():
+    # get data
+    data = request.get_json(force=True)
+    print(data)
+    data_df = pd.DataFrame(pd.Series(data)).T
+    print(data_df)
+
+    # predictions
+    result = model.predict(data_df)
+
+    # send back to browser
+    output = {'results': int(result[0])}
+    # return data
+    return jsonify(results=output)
+
+if __name__ == '__main__':
+    app.run(port = 5000, debug=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+""" def get_data():
     connection_string = "postgres://postgres:Ciara1504@localhost/vaccines"
     # with create_engine(connection_string) as conn:
     conn=create_engine(connection_string)
@@ -68,10 +119,10 @@ def api_daily(country):
 @app.route("/api/countries")
 def countries():
     data = get_data()
-    return jsonify(data.country.unique().tolist())
+    return jsonify(data.country.unique().tolist()) """
 
 
-@app.route("/Graphic1")
+""" @app.route("/Graphic1")
 def Graphic1():
     return render_template("Graphic1.html")
 
@@ -90,9 +141,7 @@ def Graphic4():
 
 @app.route("/Readmore")
 def Readmore():
-    return render_template("Readmore.html")
+    return render_template("Readmore.html") """
 
 #fin de visualizaciones
 
-if __name__=="__main__":
-    app.run(debug=True)

@@ -1,5 +1,5 @@
 // Create an initial map object
-// Set the longitude, latitude, and the starting zoom level
+/* Set the longitude, latitude, and the starting zoom level
 var myMap = L.map("map", {
 	center: [15.5994, -28.6731],
 	zoom: 3
@@ -140,4 +140,106 @@ var myMap = L.map("map", {
   .bindPopup(`<h1>${country.name}</h1> <hr> <p>People Vaccinated: ${country.people_vaccinated}</p>
   <hr> <p>Population: ${country.population}<p>`)
 	.addTo(myMap)
-  } 
+  } */
+
+ // save form data
+
+
+let button = d3.select("#btnPredict");
+button.on("click", function() {
+	let predictDiv = d3.select("#predictionResult")
+    answers = []
+    let age = d3.select("#age");
+	let weight = d3.select("#weight");
+	let pregnancy = d3.select("#pregnancy");
+    let smoke = d3.select("#smoke");
+	let gender = d3.select("#gender");
+	let epoc = d3.select("#epoc");
+	let hypertension = d3.select("#hypertension");
+	let asthma = d3.select("#asthma");
+	let diabetes = d3.select("#diabetes");
+	let dinmusupr = d3.select("#inmusupr");
+	let cardiovascular = d3.select("#cardiovascular");
+	let renal = d3.select("#renal");
+	
+    let ageValue = parseInt(age.property("value"));
+	let weightValue = weight.property("value");	
+    let pregnancyValue = pregnancy.property("value");
+    let smokeValue = smoke.property("value");
+	let genderValue = gender.property("value");
+	var male = 0, female = 0
+	
+	let epocValue = epoc.property("value");
+	let hypertensionValue = hypertension.property("value");
+	let asthmaValue = asthma.property("value");
+	let diabetesValue = diabetes.property("value");
+	let dinmusuprValue = dinmusupr.property("value");
+	let cardiovascularValue = cardiovascular.property("value");
+	let renalValue = renal.property("value");
+
+	if (genderValue == "MUJER"){
+		female = 1;
+	} else if(genderValue == "HOMBRE"){
+		male = 1;
+	}
+	
+	if(parseInt(weightValue)>90){
+		weightValue = 1;
+	}else {
+		weightValue = 0	;
+	}
+
+	let age1 = 0, age2 = 0, age3 = 0, age4 = 0, age5 = 0, age6 = 0
+	if (ageValue < 25){
+		age1 = 1;
+	} else if(ageValue < 41){
+		age2 = 1;
+	} else if(ageValue < 56){
+		age3 = 1;
+	} else if(ageValue < 71){
+		age4 = 1;
+	} else if(ageValue < 86){
+		age5 = 1;
+	} else{
+		age6 = 1;
+	}
+
+	var requestData = {
+		"EMBARAZO": parseInt(pregnancyValue),
+		"DIABETES":	parseInt(diabetesValue),
+		"EPOC": parseInt(epocValue),
+		"ASMA": parseInt(asthmaValue),
+		"INMUSUPR": parseInt(dinmusuprValue),
+		"HIPERTENSION": parseInt(hypertensionValue),
+		"CARDIOVASCULAR": parseInt(cardiovascularValue),
+		"OBESIDAD": weightValue,
+		"RENAL_CRONICA": parseInt(renalValue),
+		"TABAQUISMO": parseInt(smokeValue),
+		"SEXO_HOMBRE": male,
+		"SEXO_MUJER": female,
+		"Age Ranges_25 - 40": age2,
+		"Age Ranges_41 - 55": age3,
+		"Age Ranges_56 - 70": age4,
+		"Age Ranges_71 - 85": age5,
+		"Age Ranges_85+": age6,
+		"Age Ranges_<25": age1
+	}
+	
+	d3.json("http://127.0.0.1:5000/api/",{
+		method:"POST",
+		body: JSON.stringify(requestData),
+		headers: {
+		  "Content-type": "application/json; charset=UTF-8",
+		  "Access-Control-Allow-Origin": "true"
+		}
+	  }).then(data=> {
+		  console.log(data['results']['results']);
+		predictDiv.html( data['results']['results'] === 0 ? "No Intubation risk" : "Intubation risk" );
+	})
+
+
+
+    console.log(answers);
+})
+
+
