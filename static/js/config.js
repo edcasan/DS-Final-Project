@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // console.log("Hola")
+=======
+/* console.log("Hola")
+>>>>>>> e209193b831ba3a36c25b783ef3bea9c9c69142c
 
 // d3.json("/api_country").then(data=>{
 
@@ -52,6 +56,7 @@
 //     let dates = values[0].date
 //     let dailyvaccinations =values[0].daily_vaccinations
 
+<<<<<<< HEAD
 //         let dailycountry_data = [
 //           {
 //             x: dates,
@@ -72,5 +77,21 @@
 
 
 // init();
+=======
+        let dailycountry_data = [
+          {
+            x: dates,
+            y: dailyvaccinations,
+            type: 'scatter',
+            mode: 'lines+markers',
+            marker: {size:12}
+          }
+        ]
+        Plotly.newPlot('dailycountry', dailycountry_data);
+  }); //End d3.json
+} //End countryChanged
+ */
+//init();
+>>>>>>> e209193b831ba3a36c25b783ef3bea9c9c69142c
 
 

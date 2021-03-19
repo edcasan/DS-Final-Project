@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Caccines</title>
+  <title>Covid-19</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -45,7 +45,11 @@
     <div class="container">
 
       <div class="logo float-left">
+<<<<<<< HEAD:templates/Graphic1.html
         <h1 class="text-light"><a href="/"><span>COVID-19 Prediction with Machine Learning</span></a></h1>
+=======
+        <h1 class="text-light"><a href="/"><span>BLOG</span></a></h1>
+>>>>>>> e209193b831ba3a36c25b783ef3bea9c9c69142c:templates/search2.html
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -56,8 +60,13 @@
           <li class="drop-down"><a href="">Menu</a>
             <ul>
               <li><a href="/form">ML applied to Covid-19</a></li>
+<<<<<<< HEAD:templates/Graphic1.html
               <li><a href="/Graphic2">Vaccines</a></li>
               <li><a href="/Graphic1">Top 15</a></li>
+=======
+              <li><a href="/Graphic3">Vaccines Mexico</a></li>
+              <li><a href="/Graphic2">Vaccines Worldwide</a></li>
+>>>>>>> e209193b831ba3a36c25b783ef3bea9c9c69142c:templates/search2.html
               <li><a href="/Readmore">Blog</a></li>
             </ul>
           </li>
@@ -68,18 +77,42 @@
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
+  <main id="main"></main>
 
-    <!-- ======= Our Team Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
+  <!-- ======= Blog Section ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Top 15 Countries Vaccination</h2>
-        
+      <div class="d-flex justify-content-between align-items-center"></div>
+      <h2>Blog</h2>
+
+      <ol>
+
+    </div>
+
+
+    <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-8 entries">
+
+
+          <div class="verticalcenter">
+    
+            <img src="../static/images/Covidmask.JPG" alt="centered image" />
+            <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/proper-mask-wearing-coronavirus-prevention-infographic" target="_blank" class="btn btn-primary btn-get-started animate__animated animate__fadeInUp">see more</a>
+          </div>
         </div>
+                  
+               
+                </div>
+               
+              </div>
 
+           </div>
       </div>
+<<<<<<< HEAD:templates/Graphic1.html
     </section>
 
     <!-- ======= Team Section ======= -->
@@ -121,6 +154,9 @@
       </div>
     </section><!-- VIDEO -->
 
+=======
+   
+>>>>>>> e209193b831ba3a36c25b783ef3bea9c9c69142c:templates/search2.html
   <!-- ======= Footer ======= -->
   <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
 
