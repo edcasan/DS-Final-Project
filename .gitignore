@@ -1,6 +1,9 @@
 Project2/*
 data/country_vaccinations.csv
 data/Population.csv
+mexico_clean_data.csv
+
+
 
 .DS_Store
 # Byte-compiled / optimized / DLL files
