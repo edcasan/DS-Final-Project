@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Covid-19</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../static/assets/img/favicon.png" rel="icon">
+    <link href="../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!------ Include the above in your HEAD tag ---------->
+
+    <!-- Template Main CSS File -->
+    <link href="../static/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Moderna - v2.2.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top ">
+        <div class="container">
+    
+          <div class="logo float-left">
+            <h1 class="text-light"><a href="/"><span>COVID-19 Prediction with Machine Learning</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          </div>
+    
+          <nav class="nav-menu float-right d-none d-lg-block">
+            <ul>
+              <li class="active"><a href="/">Home</a></li>
+              <li class="drop-down"><a href="">Menu</a>
+                <ul>
+                    <li><a href="/form">ML applied to Covid-19</a></li>
+                    <li><a href="/Graphic3">Vaccines Mexico</a></li>
+                    <li><a href="/Graphic2">Vaccines Worldwide</a></li>
+                    <li><a href="/Readmore">Blog</a></li>
+              
+                </ul>
+              </li>
+              
+            </ul>
+          </nav><!-- .nav-menu -->
+    
+        </div>
+      </header><!-- End Header -->
+
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <h3>Welcome</h3>
+                <p>Complete your data if you have covid and want to know if you could be intubated due to your medical conditions</p>
+
+            </div>
+            <div class="col-md-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+
+
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Complete your data</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <p>Personal info </p>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  id="age" placeholder="Age *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  id="weight" placeholder="Weight *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="pregnancy">
+                                        <option class="hidden" value="0" selected disabled>Are you pregnant?</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <select class="form-control" id="smoke">
+                                        <option class="hidden" value="0" selected disabled>Do you smoke?</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <select class="form-control" id="gender">
+                                        <option class="hidden" selected disabled>Gender</option>
+                                        <option value="MUJER">Female</option>
+                                        <option value="HOMBRE">Male</option>
+                                    </select>  
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Do you have any of these diseases? </p>
+                                <div class="form-group">
+                                    <select class="form-control" id="epoc">
+                                        <option class="hidden" value="0" selected disabled>EPOC</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="hypertension">
+                                        <option class="hidden" value="0" selected disabled>HYPERTENSION</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <select class="form-control" id="asthma">
+                                        <option class="hidden" value="0" selected disabled>ASTHMA</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="diabetes">
+                                        <option class="hidden" value="0" selected disabled>DIABETES</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="inmusupr">
+                                        <option class="hidden" value="0" selected disabled>INMUSUPR</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="cardiovascular">
+                                        <option class="hidden" value="0" selected disabled>CARDIOVASCULAR</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="renal">
+                                        <option class="hidden" value="0" selected disabled>RENAL FAILURE</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12">
+            <div class="row">
+                <div class="col-12 col-md-6 offset-md-3">
+                    <div class="row">
+                        <div id="btnPredict" class="btnRegister col-12"> <p class="center">Make prediction</p>    
+                        </div>
+            
+                        <div class="caja col-12" id="predictionResult">                               </div>
+                    </div>
+                </div>
+                
+
+            </div>>
+            </div>
+            
+        </div>
+        </div>
+       
+       </div>
+   
+    
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script src="../static/js/logic.js"></script>
+
+</body>
+
+</html>

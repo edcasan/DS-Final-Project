@@ -1,12 +1,12 @@
-d3.json("/api_country").then(data=>{
+// d3.json("/api_country").then(data=>{
 
-    let country_data = [
-        {
-          x: data.map(d=>d.country),
-          y: data.map(d=>d.daily_vaccinations),
-          type: 'bar'
-        }
-      ];
+//     let country_data = [
+//         {
+//           x: data.map(d=>d.country),
+//           y: data.map(d=>d.daily_vaccinations),
+//           type: 'bar'
+//         }
+//       ];
       
-    Plotly.newPlot('country', country_data);
-})
+//     Plotly.newPlot('country', country_data);
+// })
